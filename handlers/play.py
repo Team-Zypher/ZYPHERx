@@ -846,7 +846,7 @@ async def lol_cb(b, cb):
             chat_id,
             photo="final.png",
             caption=f"🏷 **Name:** [{title[:60]}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n"
-            + f"🎧 **Request by:** {r_by.mention}",
+            + f"🎧 **Request by:** {message.from_user.mention}",
             reply_markup=ppl_b,
         )
     if path.exists("final.png"):

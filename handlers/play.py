@@ -111,9 +111,8 @@ def cb_admin_check(func: Callable) -> Callable:
         admemes = a.get(cb.message.chat.id)
         if cb.from_user.id in admemes:
             return await func(client, cb)
-        else:
-            await cb.answer("💡 only admin can tap this button !", show_alert=True)
-            return
+        await cb.answer("💡 only admin can tap this button !", show_alert=True)
+        return
     return decorator
 
 
@@ -292,7 +291,6 @@ async def music_onoff(_, message):
         )
         return
     status = message.text.split(None, 1)[1]
-    message.chat.id
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`processing...`")
         if not message.chat.id in DISABLED_GROUPS:
@@ -324,9 +322,6 @@ async def p_cb(b, cb):
     global que
     que.get(cb.message.chat.id)
     type_ = cb.matches[0].group(1)
-    cb.message.chat.id
-    cb.message.chat
-    cb.message.reply_markup.inline_keyboard[1][0].callback_data
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
@@ -366,7 +361,6 @@ async def m_cb(b, cb):
         chet_id = cb.message.chat.id
     qeue = que.get(chet_id)
     type_ = cb.matches[0].group(1)
-    cb.message.chat.id
     m_chat = cb.message.chat
 
     the_data = cb.message.reply_markup.inline_keyboard[1][0].callback_data
@@ -593,7 +587,6 @@ async def play(_, message: Message):
         thumb_name = "https://telegra.ph/file/7195e6a732d5c157e64ef.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        message.from_user.first_name
         await generate_cover(title, thumbnail)
         file_path = await converter.convert(
             (await message.reply_to_message.download(file_name))
@@ -622,15 +615,12 @@ async def play(_, message: Message):
             )
             print(str(e))
             return
-        patch - 8
         dlurl = url
         dlurl = dlurl.replace("youtube", "youtubepp")
 
         dlurl = url
         dlurl = dlurl.replace("youtube", "youtubepp")
-        main
         keyboard = ppl_b
-        message.from_user.first_name
         await generate_cover(title, thumbnail)
         file_path = await converter.convert(youtube.download(url))
     else:
@@ -719,7 +709,6 @@ async def play(_, message: Message):
                     ],
                 ]
             )
-            message.from_user.first_name
             await generate_cover(title, thumbnail)
             file_path = await converter.convert(youtube.download(url))
     chat_id = get_chat_id(message.chat)
@@ -784,13 +773,12 @@ async def lol_cb(b, cb):
     try:
         cb.message.reply_to_message.from_user.first_name
     except:
-        cb.message.from_user.first_name
+        pass
     results = YoutubeSearch(query, max_results=5).to_dict()
     resultss = results[x]["url_suffix"]
     title = results[x]["title"][:60]
     thumbnail = results[x]["thumbnails"][0]
     duration = results[x]["duration"]
-    results[x]["views"]
     url = f"https://www.youtube.com{resultss}"
     try:
         secmul, dur, dur_arr = 1, 0, duration.split(":")
@@ -924,9 +912,6 @@ async def ytplay(_, message: Message):
         )
         return
 
-    message.from_user.id
-    message.from_user.first_name
-
     query = ""
     for i in message.command[1:]:
         query += " " + str(i)
@@ -974,7 +959,6 @@ async def ytplay(_, message: Message):
                     ],
                 ]
             )
-    message.from_user.first_name
     await generate_cover(title, thumbnail)
     file_path = await converter.convert(youtube.download(url))
     chat_id = get_chat_id(message.chat)

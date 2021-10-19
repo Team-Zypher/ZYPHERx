@@ -768,7 +768,21 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("💡 sorry, this is not for you !", show_alert=True)
         return
-    await cb.message.edit(f"**Downloading Ur song...**")
+    rn_tb = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text='⏳', callback_data='bmckk'
+                )
+            ]
+        ]
+    )
+    await cb.message.delete()
+    await cb.message.reply_photo(
+        photo='https://telegra.ph/file/21feb1941101818ff473a.jpg',
+        caption='Downloading ur song...',
+        reply_markup=rn_tb
+    )
     x = int(x)
     try:
         cb.message.reply_to_message.from_user.first_name

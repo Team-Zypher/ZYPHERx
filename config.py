@@ -19,6 +19,7 @@ THUMB_IMG = getenv("THUMB_IMG", "https://telegra.ph/file/976bb4ee2f66857cfa317.j
 AUD_IMG = getenv("AUD_IMG", "https://telegra.ph/file/5dd2446cfe99c08a7490a.jpg")
 QUE_IMG = getenv("QUE_IMG", "https://telegra.ph/file/e3c0c7e817f95448473a1.jpg")
 ALIVE_IMG = getenv('ALIVE_IMG', 'https://telegra.ph/file/1c041dbf79dba92070da0.mp4')
+ALIVE_NAME = getenv('ALIVE_NANE', 'kk')
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_USERNAME = getenv("BOT_USERNAME", "ZYPHERx_bot")

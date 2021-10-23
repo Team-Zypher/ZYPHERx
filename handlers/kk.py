@@ -92,6 +92,8 @@ async def start_(client: Client, message: Message):
     if len(message.command) == 2:
         query = message.command[1]
         if query.startswith("ytinfo_"):
+            chat_id = message.chat.id
+            user_id = message.from_user.id
             yt_link = query.split("ytinfo_")[1]
             details = get_yt_details(yt_link)
             thumb_url = details["thumbnails"]

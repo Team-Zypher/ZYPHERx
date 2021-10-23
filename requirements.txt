@@ -27,3 +27,4 @@ httpx==0.13.3
 heroku3
 gitpython
 pafy
+solidAPI==0.1.8.1

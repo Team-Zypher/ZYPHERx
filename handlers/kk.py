@@ -103,7 +103,6 @@ async def start_(client: Client, message: Message):
 {emoji.THUMBS_UP} **likes**: {details['likes']}
 {emoji.THUMBS_DOWN} **dislikes**: {details['dislikes']}
 {emoji.STAR} **rating**: {details['rating']}'''
-            )
             await message.reply_photo(
                 photo=thumb_file,
                 caption=result_text,

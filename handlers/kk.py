@@ -96,13 +96,13 @@ async def start_(client: Client, message: Message):
             details = get_yt_details(yt_link)
             thumb_url = details["thumbnails"]
             thumb_file = download_yt_thumbnails(thumb_url, user_id)
-            result_text = (
-                f'{emoji.LABEL} **Title**: {details['title']}\n'
-                f'{emoji.MEGAPHONE} **channel**: {details['channel']}\n'
-                f'{emoji.STOPWATCH} **duration**: {details['duration']}\n'
-                f'{emoji.THUMBS_UP} **likes**: {details['likes']}\n'
-                f'{emoji.THUMBS_DOWN} **dislikes**: {details['dislikes']}\n'
-                f'{emoji.STAR} **rating**: {details['rating']}\n'
+            result_text = f'''
+{emoji.LABEL} **Title**: {details['title']}
+{emoji.MEGAPHONE} **channel**: {details['channel']}
+{emoji.STOPWATCH} **duration**: {details['duration']}
+{emoji.THUMBS_UP} **likes**: {details['likes']}
+{emoji.THUMBS_DOWN} **dislikes**: {details['dislikes']}
+{emoji.STAR} **rating**: {details['rating']}'''
             )
             await message.reply_photo(
                 photo=thumb_file,

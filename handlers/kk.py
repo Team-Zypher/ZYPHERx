@@ -109,7 +109,7 @@ async def start_(client: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(f'{emoji.MOVIE_CAMERA} watch on youtube', url=f'{details['link']}'),
+                            InlineKeyboardButton(f'{emoji.MOVIE_CAMERA} watch on youtube', url=f"{details['link']}"),
                         ],
                         [
                             InlineKeyboardButton(f'{emoji.WASTEBASKET} close', callback_data='cls')
